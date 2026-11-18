@@ -1,0 +1,212 @@
+/*
+ * WarehousePro 3.5 look: the "enterprise blue" of the Swing version's Nimbus
+ * overrides (UIConstants), expressed as JavaFX CSS on top of Modena.
+ */
+.root {
+    -wp-primary: #1f497d;
+    -wp-primary-dark: #112f58;
+    -wp-accent: #4682b4;
+    -wp-row-alt: #f0f6fc;
+    -wp-low-stock: #fff3cd;
+    -wp-critical: #ffdcdc;
+    -wp-success: #008000;
+    -wp-warning: #b46400;
+    -wp-danger: #b41e1e;
+    -wp-toolbar: #ecf0f5;
+    -wp-control: #e4eaf2;
+    -wp-border: #bec8d7;
+
+    -fx-base: #e4eaf2;
+    -fx-accent: -wp-accent;
+    -fx-focus-color: -wp-accent;
+    -fx-font-family: "Tahoma", "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-font-size: 12px;
+}
+
+/* ---- Title bar and menu bar ---- */
+.title-bar {
+    -fx-background-color: linear-gradient(to right, -wp-primary-dark, -wp-primary);
+    -fx-padding: 0 12 0 12;
+    -fx-min-height: 42;
+    -fx-pref-height: 42;
+    -fx-alignment: center-left;
+    -fx-spacing: 8;
+}
+.title-bar .app-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.title-bar .user-info {
+    -fx-text-fill: #bed7f0;
+    -fx-font-size: 11px;
+}
+.title-bar .logout-button {
+    -fx-background-color: #6482aa;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 3;
+}
+.menu-bar {
+    -fx-background-color: #f0f4fa;
+}
+
+/* ---- Tabs ---- */
+.main-tabs > .tab-header-area > .headers-region > .tab {
+    -fx-padding: 4 14 4 14;
+}
+.main-tabs > .tab-header-area > .headers-region > .tab .tab-label {
+    -fx-font-weight: bold;
+}
+.main-tabs > .tab-header-area > .tab-header-background {
+    -fx-background-color: -wp-toolbar;
+}
+
+/* ---- Panels, toolbars, sections ---- */
+.panel {
+    -fx-background-color: white;
+    -fx-padding: 8;
+}
+.toolbar {
+    -fx-background-color: -wp-toolbar;
+    -fx-border-color: transparent transparent #c8d2e1 transparent;
+    -fx-padding: 6 8 6 8;
+    -fx-spacing: 4;
+    -fx-alignment: center-left;
+}
+.toolbar-button {
+    -fx-padding: 3 10 3 10;
+}
+.add-button {
+    -fx-base: #e6f5e6;
+}
+.primary-button {
+    -fx-background-color: -wp-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 5 16 5 16;
+    -fx-background-radius: 3;
+}
+.primary-button:hover {
+    -fx-background-color: -wp-primary-dark;
+}
+.section {
+    -fx-border-color: -wp-border;
+    -fx-border-width: 1;
+    -fx-padding: 14 10 10 10;
+    -fx-background-color: white;
+}
+.section-title {
+    -fx-text-fill: -wp-primary;
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-padding: 0 4 0 4;
+    -fx-translate-y: -9;
+}
+.field-label {
+    -fx-font-weight: bold;
+}
+.panel-title {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -wp-primary-dark;
+}
+.hint {
+    -fx-text-fill: #78829a;
+    -fx-font-size: 10px;
+    -fx-font-style: italic;
+}
+.error-text {
+    -fx-text-fill: -wp-danger;
+}
+
+/* ---- Tables ---- */
+.data-table .column-header,
+.data-table .column-header-background .filler {
+    -fx-background-color: #d2dceb;
+}
+.data-table .column-header .label {
+    -fx-text-fill: -wp-primary-dark;
+    -fx-font-weight: bold;
+}
+.data-table .table-row-cell {
+    -fx-cell-size: 22px;
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+}
+.data-table .table-row-cell:odd {
+    -fx-background-color: -wp-row-alt;
+}
+.data-table .table-row-cell:low-stock {
+    -fx-background-color: -wp-low-stock;
+}
+.data-table .table-row-cell:critical {
+    -fx-background-color: -wp-critical;
+}
+.data-table .table-row-cell:selected {
+    -fx-background-color: -wp-accent;
+}
+.data-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+.status-ok { -fx-text-fill: -wp-success; -fx-font-weight: bold; }
+.status-warning { -fx-text-fill: -wp-warning; -fx-font-weight: bold; }
+.status-danger { -fx-text-fill: -wp-danger; -fx-font-weight: bold; }
+
+/* ---- Dashboard ---- */
+.kpi-card {
+    -fx-background-color: white;
+    -fx-border-color: -wp-border;
+    -fx-border-width: 0 0 0 4;
+    -fx-padding: 10 14 10 14;
+    -fx-spacing: 2;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 4, 0, 0, 1);
+}
+.kpi-value {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+.kpi-label {
+    -fx-font-size: 10px;
+    -fx-text-fill: #5a6c87;
+}
+
+/* ---- Status bar ---- */
+.status-bar {
+    -fx-background-color: #dce4f0;
+    -fx-border-color: #a0afc8 transparent transparent transparent;
+    -fx-padding: 2 8 2 8;
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+}
+
+/* ---- Login ---- */
+.login-root {
+    -fx-background-color: linear-gradient(to bottom right, #dfe7f2, #c3d1e4);
+}
+.login-card {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(17, 47, 88, 0.25), 18, 0, 0, 4);
+}
+.login-banner {
+    -fx-background-color: linear-gradient(to right, -wp-primary, -wp-primary-dark);
+    -fx-padding: 22 20 22 20;
+    -fx-alignment: center;
+    -fx-spacing: 4;
+}
+.login-banner .app-name {
+    -fx-text-fill: white;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+.login-banner .app-subtitle {
+    -fx-text-fill: #bed7f0;
+    -fx-font-size: 11px;
+}
+.login-footer {
+    -fx-background-color: #f5f7fa;
+    -fx-border-color: #c8d2e1 transparent transparent transparent;
+    -fx-padding: 8;
+    -fx-alignment: center;
+}

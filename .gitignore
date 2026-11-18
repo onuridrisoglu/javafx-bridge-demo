@@ -1,0 +1,14 @@
+target/
+.idea/
+*.iml
+.DS_Store
+**/node_modules
+**/frontend/generated
+warehousedb*.db
+vaadin-app/applibs/*.jar
+vaadin-app/package.json
+vaadin-app/package-lock.json
+vaadin-app/tsconfig.json
+vaadin-app/types.d.ts
+vaadin-app/vite.config.ts
+vaadin-app/vite.generated.ts
